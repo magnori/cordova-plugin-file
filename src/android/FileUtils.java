@@ -1289,6 +1289,9 @@ public class FileUtils extends CordovaPlugin {
             } else if (path.startsWith(LocalFilesystemURL.fsNameToCdvKeyword("assets"))) {
                 targetFileSystem = "assets";
             }
+	    else if (path.startsWith(LocalFilesystemURL.fsNameToCdvKeyword("content"))) {
+                targetFileSystem = "content";
+            }
 
             boolean isAssetsFS = targetFileSystem == "assets";
 
